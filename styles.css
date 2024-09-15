@@ -1,0 +1,242 @@
+
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+    --Green: #06A816;
+    --Orange: #E75D02;
+    --Black: #000000;
+    --White: #ffffff;
+    --body-font: "Habibi", "Irish Grover", serif;
+}
+
+/*-------------------- CSS RESET ---------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: "Irish Grover";
+}
+
+body {
+    min-width: 428px;
+    font-family: "habibi", serif;
+    background-color: white;
+    line-height: 1.6;
+}
+
+header {
+    color: var(--White);
+}
+
+#top {
+    background-color: var(--Green);
+    padding: 1.5em;
+}
+
+main {
+    padding: 1em;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 2em;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 1.25em;
+    background-color: var(--Orange);
+    color: var(--White);
+    display: block;
+    text-align: center;
+    border: 2px solid var(--White);
+    border-radius: 5px;
+    padding: 7px 5em 7px 5em;
+    margin: 1em;
+}
+
+.fixed-link {
+    position: fixed;
+    padding: 1em;
+    right: 20px;       
+    bottom: 20px; 
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--White);
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3, p {
+    font-size: 1.25em;
+}
+
+main h3 {
+    padding: 1em 0 1em 0;
+    text-align: center;
+}
+
+#vegetables {
+    margin-top: 2em;
+}
+
+.items {
+    position: relative;
+    display: inline-block;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white; 
+    padding: 5px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.contact {
+    margin: 2em 0 2em 0;
+
+}
+
+#green-footer {
+    color: var(--White);
+    background-color: var(--Green);
+    padding: 10px;
+}
+
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+
+@media screen and (min-width: 428px) {
+    header {
+        text-align: center;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .images {
+        display: grid;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    #green-footer{
+        text-align: center;
+    }
+}
+
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+
+@media screen and (min-width: 834px) {
+    header {
+        text-align: left;
+    }
+
+    #top {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    #top p {
+        text-align: right;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+
+    #green-footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 1280px) {
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: var(--Green);
+        align-items: center;
+    }
+    
+    #top {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #top p {
+        text-align: left;
+    }
+
+
+    nav ul {
+        display: flex;
+        flex-direction: row-reverse
+    }
+
+
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .hours {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin: 2em 30px 2em 0;
+    }
+
+    #green-footer{
+        padding-right: 3em;
+    }
+}
+
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width: 1440px) {
+    .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        gap: 30px;
+    }
+}
